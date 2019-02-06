@@ -13,3 +13,6 @@ Projet Tutoré:
 - TD2: [Ajout de .geojson](https://github.com/LCharp/Leaflet_TD2/) -> Public.
 
 
+### Licence Professionnel : Developpement Web et Mobile @IUT Orléans
+
+### BTS : SIO - option SLAM @Lycée Benjamin Franklin
