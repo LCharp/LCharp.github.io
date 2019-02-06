@@ -17,4 +17,5 @@ Leaflet:
 
 ### BTS : SIO - option SLAM - @Lycée Benjamin Franklin - Orléans
 
-- Wordpress: [Présentation de fin de formation](http://lucas.charp.free.fr/wordpress/)
+Wordpress:
+-  [Présentation de fin de formation](http://lucas.charp.free.fr/wordpress/)
