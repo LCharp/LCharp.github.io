@@ -1,8 +1,8 @@
-## Welcome to GitHub Pages
+## Ma page GitHub
 
-You can use the [editor on GitHub](https://github.com/LCharp/LCharp.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Bonjour,
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Ici je partagerais des projets ou TD réalisés en cours: [Mon GitHub](https://github.com/LCharp/LCharp.github.io).
 
 ### Markdown
 
