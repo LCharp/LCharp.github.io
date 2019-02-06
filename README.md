@@ -7,6 +7,6 @@ Ici je partagerais des projets ou TD réalisés en cours: [Mon GitHub](https://g
 ### Licence Professionnel 
 
 #Leaflet:
-TD2: [Ajout de .geojson](LCharp.github.io/Leaflet_TD2).
+TD2: [Ajout de .geojson](https://lcharp.github.io/Leaflet_TD2/).
 
 
