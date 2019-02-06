@@ -4,12 +4,10 @@ Bonjour,
 
 Ici je partagerais des projets ou TD réalisés en cours: [Mon GitHub](https://github.com/LCharp/LCharp.github.io).
 
-### Markdown
+### Licence Professionnel 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
+Leaflet:
+```TD2: [Ajout de .geojson](https://github.com/LCharp/LCharp.github.io/Leaflet_TD2).
 
 # Header 1
 ## Header 2
