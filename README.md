@@ -7,7 +7,7 @@ Ici je partagerais des projets ou TD réalisés en cours: [Mon GitHub](https://g
 ### Licence Professionnel : SIG Web @IUT Carcassonne
 
 Projet Tutoré: 
-- [Course solidaire](https://github.com/LCharp/SolidariaBram) -> Private.
+- [Course solidaire](https://github.com/LCharp/404.html) -> Private.
 
 Leaflet:
 - TD2: [Ajout de .geojson](https://github.com/LCharp/Leaflet_TD2/) -> Public.
