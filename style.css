@@ -1,3 +1,8 @@
 body{
 	background-color: red;
 }
+
+h1{
+	font-family: 'Exo', sans-serif;
+	color : #146BFD;
+}
