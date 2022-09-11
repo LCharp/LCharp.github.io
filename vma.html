@@ -1,0 +1,112 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+<head>
+   <meta name="author" content="Benoît MILLAMON">
+   <meta name="description" content="ACW">
+   <meta name="keywords" content="Athlétisme">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <title>Calcul VMA</title>
+   <LINK href="style.css" rel="stylesheet" type="text/css">
+
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body class="bg_global">
+
+
+<script type="text/javascript"  src="vma.js">
+</script>
+
+
+<h1>S'entraîner avec la VMA</h1>
+Respecte ton Allure
+<form id="calc" name="calc" action="javascript:calculer()" method="post">
+<input type="text" size="4" name="vma"   MaxLength=4> km/h
+<input type="submit" Value="  Calculer  ">&nbsp<input type="reset" value="Réinitialiser" ><br>
+
+<div class="container">
+
+  <div class="row">
+
+      <div class="col">
+      </div>
+
+      <div class="col-10">
+        <table class="table table-md table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">%</th>
+              <th scope="col">V / 100 m</th>
+              <th scope="col">V / 1000 m</th>
+              <th scope="col">dist. / 30"</th>
+              <th scope="col">km/h</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+            <tr>
+              <th scope="row">110 %</th>
+              <td><input type="text" name="Vmad100_110_bis" size="12" ></td>
+              <td><input type="text" name="Vmad1000_110_bis" size="12" ></td>
+              <td><input type="text" name="Vmat30_110_bis" size="12" ></td>
+              <td><input type="text" name="Vmat110_kmh" size="12" ></td>
+            </tr>
+            <tr>
+              <th scope="row">100 %</th>
+              <td><input type="text" name="Vmad100_100_bis" size="12" ></td>
+              <td><input type="text" name="Vmad1000_100_bis" size="12" ></td>
+              <td><input type="text" name="Vmat30_100_bis" size="12" ></td>
+              <td><input type="text" name="Vmat100_kmh" size="12" ></td>
+            </tr>
+            <tr>
+              <th scope="row">95 %</th>
+              <td><input type="text" name="Vmad100_95_bis" size="12" ></td>
+              <td><input type="text" name="Vmad1000_95_bis" size="12" ></td>
+              <td><input type="text" name="Vmat30_95_bis" size="12" ></td>
+              <td><input type="text" name="Vmat95_kmh" size="12" ></td>
+            </tr>
+            <tr>
+              <th scope="row">90 %</th>
+              <td><input type="text" name="Vmad100_90_bis" size="12" ></td>
+              <td><input type="text" name="Vmad1000_90_bis" size="12" ></td>
+              <td><input type="text" name="Vmat30_90_bis" size="12" ></td>
+              <td><input type="text" name="Vmat90_kmh" size="12" ></td>
+            </tr>
+            <tr>
+              <th scope="row">85 %</th>
+              <td><input type="text" name="Vmad100_85_bis" size="12" ></td>
+              <td><input type="text" name="Vmad1000_85_bis" size="12" ></td>
+              <td><input type="text" name="Vmat30_85_bis" size="12" ></td>
+              <td><input type="text" name="Vmat85_kmh" size="12" ></td>
+            </tr>
+            <tr>
+              <th scope="row">80 %</th>
+              <td><input type="text" name="Vmad100_80_bis" size="12" ></td>
+              <td><input type="text" name="Vmad1000_80_bis" size="12" ></td>
+              <td><input type="text" name="Vmat30_80_bis" size="12" ></td>
+              <td><input type="text" name="Vmat80_kmh" size="12" ></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col">
+      </div>
+      
+    </div>
+
+</div>
+</form>
+</div>
+<footer>
+  <div class="bg_footer">
+    🦁🐔🏴‍☠️
+  </div>
+</footer>
+<!-- TAG : FOOTER STOP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+</body>
+</html>
