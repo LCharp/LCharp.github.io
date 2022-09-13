@@ -1,0 +1,161 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+<head>
+   <meta name="author" content="Benoît MILLAMON">
+   <meta name="description" content="ACW">
+   <meta name="keywords" content="Athlétisme">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <title>Calcul VMA</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+   <LINK href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="bg_global">
+
+  <script type="text/javascript"  src="vma.js">
+
+  </script>
+
+  <h1>S'entraîner avec la VMA</h1>
+<div class="row">
+  <div class="col-sm">
+  </div>
+  <div class="col-sm">
+    <form id="calc" name="calc" action="javascript:calculer()" method="post">
+    <input type="text" size="4" name="vma" MaxLength=4> km/h
+    <input type="submit" Value="  Calculer  ">&nbsp<input type="reset" value="Réinitialiser" ><br>
+  </div>
+  <div class="col-sm">
+  </div>
+
+</div>
+
+
+  <hr>
+
+  <h1>Orientation de l'entraînement</h1>
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+      <div>
+        <table border=0 cellpadding=0 cellspacing=0>
+        <tr><td><b>Allure footing : (60 % VMA)</b><td ><input type="text" name="Vmad1000_60_bis" size="12" ><td>
+        <tr><td><b>Allure Seuil : (70 % VMA)</b><td ><input type="text" name="Vmad1000_70_bis" size="12" ><td>
+        <tr><td><b>Allure séance : (90% VMA)</b><td ><input type="text" name="Vmad1000_90_bi" size="12" ><td>
+        </table>
+        <br>
+      </div>
+    </div>
+    <div class="col-sm">
+    </div>
+  </div>
+
+
+
+  <h1>Travail intermittent</h1>
+  <center>
+  <table border=1 cellpadding=0 cellspacing=0>
+  <tr><th class="text-center"> % <th class="text-center">  V / 100 m  <th class="text-center">  V / 1000 m  <th class="text-center"> dist. / 30'' <th class="text-center"> km/h <th class="text-center">
+  <tr><td>&nbsp&nbsp 115 % &nbsp&nbsp<td ><input type="text" name="Vmad100_115_bis" size="12" ><td><input type="text" name="Vmad1000_115_bis" size="12" ><td><input type="text" name="Vmat30_115_bis" size="12" ><td><input type="text" name="Vmat115_kmh" size="12" ><td>
+  <tr><td>&nbsp&nbsp 110 % &nbsp&nbsp<td ><input type="text" name="Vmad100_110_bis" size="12" ><td><input type="text" name="Vmad1000_110_bis" size="12" ><td><input type="text" name="Vmat30_110_bis" size="12" ><td><input type="text" name="Vmat110_kmh" size="12" ><td>
+  <tr><td>&nbsp&nbsp 105 % &nbsp&nbsp<td ><input type="text" name="Vmad100_105_bis" size="12" ><td><input type="text" name="Vmad1000_105_bis" size="12" ><td><input type="text" name="Vmat30_105_bis" size="12" ><td><input type="text" name="Vmat105_kmh" size="12" ><td>
+  <tr><td><b>&nbsp&nbsp 100 % &nbsp&nbsp</b><td ><input type="text" name="Vmad100_100_bis" size="12" ><td><input type="text" name="Vmad1000_100_bis" size="12" ><td><input type="text" name="Vmat30_100_bis" size="12" ><td><input type="text" name="Vmat100_kmh" size="12" ><td>
+  <tr><td>&nbsp&nbsp 95 % &nbsp&nbsp<td ><input type="text" name="Vmad100_95_bis" size="12" ><td><input type="text" name="Vmad1000_95_bis" size="12" ><td><input type="text" name="Vmat30_95_bis" size="12" ><td><input type="text" name="Vmat95_kmh" size="12" ><td>
+  <tr><td>&nbsp&nbsp 90 % &nbsp&nbsp<td ><input type="text" name="Vmad100_90_bis" size="12" ><td><input type="text" name="Vmad1000_90_bis" size="12" ><td><input type="text" name="Vmat30_90_bis" size="12" ><td><input type="text" name="Vmat90_kmh" size="12" ><td>
+  <tr><td>&nbsp&nbsp 85 % &nbsp&nbsp<td ><input type="text" name="Vmad100_85_bis" size="12" ><td><input type="text" name="Vmad1000_85_bis" size="12" ><td><input type="text" name="Vmat30_85_bis" size="12" ><td><input type="text" name="Vmat85_kmh" size="12" ><td>
+  <tr><td>&nbsp&nbsp 80 % &nbsp&nbsp<td ><input type="text" name="Vmad100_80_bis" size="12" ><td><input type="text" name="Vmad1000_80_ter" size="12" ><td><input type="text" name="Vmat30_80_bis" size="12" ><td><input type="text" name="Vmat80_kmh" size="12" ><td>
+  </table>
+  </center>
+  <br>
+
+
+
+  <h1>Temps par  distance</h1>
+  <center>
+  <table border=1 cellpadding=0 cellspacing=0>
+  <tr><th class="text-center">Distance<th class="text-center"> 60% <th class="text-center"> 65% <th class="text-center"> 70% <th class="text-center"> 75% <th class="text-center"> 80% <th class="text-center"> 85% <th class="text-center">
+  <tr><td class="text-center"><b>100 m</b><td ><input type="text" name="Vmad100_60" size="12" ><td><input type="text" name="Vmad100_65" size="12"><td><input type="text" name="Vmad100_70" size="12"><td><input type="text" name="Vmad100_75" size="12"><td><input type="text" name="Vmad100_80" size="12"><td><input type="text" name="Vmad100_85" size="12"><td>
+  <tr><td class="text-center"><b>200 m</b><td><input type="text" name="Vmad200_60" size="12"><td><input type="text" name="Vmad200_65" size="12"><td><input type="text" name="Vmad200_70" size="12"><td><input type="text" name="Vmad200_75" size="12"><td><input type="text" name="Vmad200_80" size="12"><td><input type="text" name="Vmad200_85" size="12"><td>
+  <tr><td class="text-center"><b>300 m</b><td><input type="text" name="Vmad300_60" size="12"><td><input type="text" name="Vmad300_65" size="12"><td><input type="text" name="Vmad300_70" size="12"><td><input type="text" name="Vmad300_75" size="12"><td><input type="text" name="Vmad300_80" size="12"><td><input type="text" name="Vmad300_85" size="12"><td>
+  <tr><td class="text-center"><b>400 m</b><td><input type="text" name="Vmad400_60" size="12"><td><input type="text" name="Vmad400_65" size="12"><td><input type="text" name="Vmad400_70" size="12"><td><input type="text" name="Vmad400_75" size="12"><td><input type="text" name="Vmad400_80" size="12"><td><input type="text" name="Vmad400_85" size="12"><td>
+  <tr><td class="text-center"><b>500 m</b><td><input type="text" name="Vmad500_60" size="12"><td><input type="text" name="Vmad500_65" size="12"><td><input type="text" name="Vmad500_70" size="12"><td><input type="text" name="Vmad500_75" size="12"><td><input type="text" name="Vmad500_80" size="12"><td><input type="text" name="Vmad500_85" size="12"><td>
+  <tr><td class="text-center"><b>600 m</b><td><input type="text" name="Vmad600_60" size="12"><td><input type="text" name="Vmad600_65" size="12"><td><input type="text" name="Vmad600_70" size="12"><td><input type="text" name="Vmad600_75" size="12"><td><input type="text" name="Vmad600_80" size="12"><td><input type="text" name="Vmad600_85" size="12"><td>
+  <tr><td class="text-center"><b>800 m</b><td><input type="text" name="Vmad800_60" size="12"><td><input type="text" name="Vmad800_65" size="12"><td><input type="text" name="Vmad800_70" size="12"><td><input type="text" name="Vmad800_75" size="12"><td><input type="text" name="Vmad800_80" size="12"><td><input type="text" name="Vmad800_85" size="12"><td>
+  <tr><td class="text-center"><b>1000 m</b><td><input type="text" name="Vmad1000_60" size="12"><td><input type="text" name="Vmad1000_65" size="12"><td><input type="text" name="Vmad1000_70" size="12"><td><input type="text" name="Vmad1000_75" size="12"><td><input type="text" name="Vmad1000_80" size="12"><td><input type="text" name="Vmad1000_85" size="12"><td>
+  <tr><td class="text-center"><b>1200 m</b><td><input type="text" name="Vmad1200_60" size="12"><td><input type="text" name="Vmad1200_65" size="12"><td><input type="text" name="Vmad1200_70" size="12"><td><input type="text" name="Vmad1200_75" size="12"><td><input type="text" name="Vmad1200_80" size="12"><td><input type="text" name="Vmad1200_85" size="12"><td>
+  <tr><td class="text-center"><b>1500 m</b><td><input type="text" name="Vmad1500_60" size="12"><td><input type="text" name="Vmad1500_65" size="12"><td><input type="text" name="Vmad1500_70" size="12"><td><input type="text" name="Vmad1500_75" size="12"><td><input type="text" name="Vmad1500_80" size="12"><td><input type="text" name="Vmad1500_85" size="12"><td>
+  <tr><td class="text-center"><b>2000 m</b><td><input type="text" name="Vmad2000_60" size="12"><td><input type="text" name="Vmad2000_65" size="12"><td><input type="text" name="Vmad2000_70" size="12"><td><input type="text" name="Vmad2000_75" size="12"><td><input type="text" name="Vmad2000_80" size="12"><td><input type="text" name="Vmad2000_85" size="12"><td>
+  <tr><td class="text-center"><b>3000 m</b><td><input type="text" name="Vmad3000_60" size="12"><td><input type="text" name="Vmad3000_65" size="12"><td><input type="text" name="Vmad3000_70" size="12"><td><input type="text" name="Vmad3000_75" size="12"><td><input type="text" name="Vmad3000_80" size="12"><td><input type="text" name="Vmad3000_85" size="12"><td>
+  </table>
+  <br>
+  <table border=1 cellpadding=0 cellspacing=0>
+  <tr><th class="text-center">Distance<th class="text-center"> 90% <th class="text-center"> 95% <th class="text-center"> 100% <th class="text-center"> 105% <th class="text-center"> 110% <th class="text-center"> 115% <th class="text-center">
+  <tr><td class="text-center"><b>100 m</b><td><input type="text" name="Vmad100_90" size="12"><td><input type="text" name="Vmad100_95" size="12"><td><input type="text" name="Vmad100_100" size="12"><td><input type="text" name="Vmad100_105" size="12"><td><input type="text" name="Vmad100_110" size="12"><td><input type="text" name="Vmad100_115" size="12"><td>
+  <tr><td class="text-center"><b>200 m</b><td><input type="text" name="Vmad200_90" size="12"><td><input type="text" name="Vmad200_95" size="12"><td><input type="text" name="Vmad200_100" size="12"><td><input type="text" name="Vmad200_105" size="12"><td><input type="text" name="Vmad200_110" size="12"><td><input type="text" name="Vmad200_115" size="12"><td>
+  <tr><td class="text-center"><b>300 m</b><td><input type="text" name="Vmad300_90" size="12"><td><input type="text" name="Vmad300_95" size="12"><td><input type="text" name="Vmad300_100" size="12"><td><input type="text" name="Vmad300_105" size="12"><td><input type="text" name="Vmad300_110" size="12"><td><input type="text" name="Vmad300_115" size="12"><td>
+  <tr><td class="text-center"><b>400 m</b><td><input type="text" name="Vmad400_90" size="12"><td><input type="text" name="Vmad400_95" size="12"><td><input type="text" name="Vmad400_100" size="12"><td><input type="text" name="Vmad400_105" size="12"><td><input type="text" name="Vmad400_110" size="12"><td><input type="text" name="Vmad400_115" size="12"><td>
+  <tr><td class="text-center"><b>500 m</b><td><input type="text" name="Vmad500_90" size="12"><td><input type="text" name="Vmad500_95" size="12"><td><input type="text" name="Vmad500_100" size="12"><td><input type="text" name="Vmad500_105" size="12"><td><input type="text" name="Vmad500_110" size="12"><td><input type="text" name="Vmad500_115" size="12"><td>
+  <tr><td class="text-center"><b>600 m</b><td><input type="text" name="Vmad600_90" size="12"><td><input type="text" name="Vmad600_95" size="12"><td><input type="text" name="Vmad600_100" size="12"><td><input type="text" name="Vmad600_105" size="12"><td><input type="text" name="Vmad600_110" size="12"><td><input type="text" name="Vmad600_115" size="12"><td>
+  <tr><td class="text-center"><b>800 m</b><td><input type="text" name="Vmad800_90" size="12"><td><input type="text" name="Vmad800_95" size="12"><td><input type="text" name="Vmad800_100" size="12"><td><input type="text" name="Vmad800_105" size="12"><td><input type="text" name="Vmad800_110" size="12"><td><input type="text" name="Vmad800_115" size="12"><td>
+  <tr><td class="text-center"><b>1000 m</b><td><input type="text" name="Vmad1000_90" size="12"><td><input type="text" name="Vmad1000_95" size="12"><td><input type="text" name="Vmad1000_100" size="12"><td><input type="text" name="Vmad1000_105" size="12"><td><input type="text" name="Vmad1000_110" size="12"><td><input type="text" name="Vmad1000_115" size="12"><td>
+  <tr><td class="text-center"><b>1200 m</b><td><input type="text" name="Vmad1200_90" size="12"><td><input type="text" name="Vmad1200_95" size="12"><td><input type="text" name="Vmad1200_100" size="12"><td><input type="text" name="Vmad1200_105" size="12"><td><input type="text" name="Vmad1200_110" size="12"><td><input type="text" name="Vmad1200_115" size="12"><td>
+  <tr><td class="text-center"><b>1500 m</b><td><input type="text" name="Vmad1500_90" size="12"><td><input type="text" name="Vmad1500_95" size="12"><td><input type="text" name="Vmad1500_100" size="12"><td><input type="text" name="Vmad1500_105" size="12"><td><input type="text" name="Vmad1500_110" size="12"><td><input type="text" name="Vmad1500_115" size="12"><td>
+  <tr><td class="text-center"><b>2000 m</b><td><input type="text" name="Vmad2000_90" size="12"><td><input type="text" name="Vmad2000_95" size="12"><td><input type="text" name="Vmad2000_100" size="12"><td><input type="text" name="Vmad2000_105" size="12"><td><input type="text" name="Vmad2000_110" size="12"><td><input type="text" name="Vmad2000_115" size="12"><td>
+  <tr><td class="text-center"><b>3000 m</b><td><input type="text" name="Vmad3000_90" size="12"><td><input type="text" name="Vmad3000_95" size="12"><td><input type="text" name="Vmad3000_100" size="12"><td><input type="text" name="Vmad3000_105" size="12"><td><input type="text" name="Vmad3000_110" size="12"><td><input type="text" name="Vmad3000_115" size="12"><td>
+  </table>
+  <br>
+
+  <h1>Distance par temps</h1>
+  <center>
+  <table border=1 cellpadding=0 cellspacing=0>
+  <tr><th class="text-center">Temps<th class="text-center"> 60% <th class="text-center"> 65% <th class="text-center"> 70% <th class="text-center"> 75% <th class="text-center"> 80% <th class="text-center"> 85% <th class="text-center">
+  <tr><td class="text-center"><b>30"</b><td><input type="text" name="Vmat30_60" size="12"><td><input type="text" name="Vmat30_65" size="12"><td><input type="text" name="Vmat30_70" size="12"><td><input type="text" name="Vmat30_75" size="12"><td><input type="text" name="Vmat30_80" size="12"><td><input type="text" name="Vmat30_85" size="12"><td>
+  <tr><td class="text-center"><b>45"</b><td><input type="text" name="Vmat45_60" size="12"><td><input type="text" name="Vmat45_65" size="12"><td><input type="text" name="Vmat45_70" size="12"><td><input type="text" name="Vmat45_75" size="12"><td><input type="text" name="Vmat45_80" size="12"><td><input type="text" name="Vmat45_85" size="12"><td>
+  <tr><td class="text-center"><b>1'</b><td><input type="text" name="Vmat60_60" size="12"><td><input type="text" name="Vmat60_65" size="12"><td><input type="text" name="Vmat60_70" size="12"><td><input type="text" name="Vmat60_75" size="12"><td><input type="text" name="Vmat60_80" size="12"><td><input type="text" name="Vmat60_85" size="12"><td>
+  <tr><td class="text-center"><b>1'15</b><td><input type="text" name="Vmat75_60" size="12"><td><input type="text" name="Vmat75_65" size="12"><td><input type="text" name="Vmat75_70" size="12"><td><input type="text" name="Vmat75_75" size="12"><td><input type="text" name="Vmat75_80" size="12"><td><input type="text" name="Vmat75_85" size="12"><td>
+  <tr><td class="text-center"><b>1'30</b><td><input type="text" name="Vmat90_60" size="12"><td><input type="text" name="Vmat90_65" size="12"><td><input type="text" name="Vmat90_70" size="12"><td><input type="text" name="Vmat90_75" size="12"><td><input type="text" name="Vmat90_80" size="12"><td><input type="text" name="Vmat90_85" size="12"><td>
+  <tr><td class="text-center"><b>2'</b><td><input type="text" name="Vmat120_60" size="12"><td><input type="text" name="Vmat120_65" size="12"><td><input type="text" name="Vmat120_70" size="12"><td><input type="text" name="Vmat120_75" size="12"><td><input type="text" name="Vmat120_80" size="12"><td><input type="text" name="Vmat120_85" size="12"><td>
+  <tr><td class="text-center"><b>2'30</b><td><input type="text" name="Vmat150_60" size="12"><td><input type="text" name="Vmat150_65" size="12"><td><input type="text" name="Vmat150_70" size="12"><td><input type="text" name="Vmat150_75" size="12"><td><input type="text" name="Vmat150_80" size="12"><td><input type="text" name="Vmat150_85" size="12"><td>
+  <tr><td class="text-center"><b>3'</b><td><input type="text" name="Vmat180_60" size="12"><td><input type="text" name="Vmat180_65" size="12"><td><input type="text" name="Vmat180_70" size="12"><td><input type="text" name="Vmat180_75" size="12"><td><input type="text" name="Vmat180_80" size="12"><td><input type="text" name="Vmat180_85" size="12"><td>
+  <tr><td class="text-center"><b>4'</b><td><input type="text" name="Vmat240_60" size="12"><td><input type="text" name="Vmat240_65" size="12"><td><input type="text" name="Vmat240_70" size="12"><td><input type="text" name="Vmat240_75" size="12"><td><input type="text" name="Vmat240_80" size="12"><td><input type="text" name="Vmat240_85" size="12"><td>
+  <tr><td class="text-center"><b>5'</b><td><input type="text" name="Vmat300_60" size="12"><td><input type="text" name="Vmat300_65" size="12"><td><input type="text" name="Vmat300_70" size="12"><td><input type="text" name="Vmat300_75" size="12"><td><input type="text" name="Vmat300_80" size="12"><td><input type="text" name="Vmat300_85" size="12"><td>
+  <tr><td class="text-center"><b>10'</b><td><input type="text" name="Vmat600_60" size="12"><td><input type="text" name="Vmat600_65" size="12"><td><input type="text" name="Vmat600_70" size="12"><td><input type="text" name="Vmat600_75" size="12"><td><input type="text" name="Vmat600_80" size="12"><td><input type="text" name="Vmat600_85" size="12"><td>
+  <tr><td class="text-center"><b>15'</b><td><input type="text" name="Vmat900_60" size="12"><td><input type="text" name="Vmat900_65" size="12"><td><input type="text" name="Vmat900_70" size="12"><td><input type="text" name="Vmat900_75" size="12"><td><input type="text" name="Vmat900_80" size="12"><td><input type="text" name="Vmat900_85" size="12"><td>
+  </table>
+  <br>
+  <table border=1 cellpadding=0 cellspacing=0>
+  <tr><th class="text-center">Temps<th class="text-center"> 90% <th class="text-center"> 95% <th class="text-center"> 100% <th class="text-center"> 105% <th class="text-center"> 110% <th class="text-center"> 115% <th class="text-center">
+  <tr><td class="text-center"><b>30"</b><td><input type="text" name="Vmat30_90" size="12"><td><input type="text" name="Vmat30_95" size="12"><td><input type="text" name="Vmat30_100" size="12"><td><input type="text" name="Vmat30_105" size="12"><td><input type="text" name="Vmat30_110" size="12"><td><input type="text" name="Vmat30_115" size="12"><td>
+  <tr><td class="text-center"><b>45"</b><td><input type="text" name="Vmat45_90" size="12"><td><input type="text" name="Vmat45_95" size="12"><td><input type="text" name="Vmat45_100" size="12"><td><input type="text" name="Vmat45_105" size="12"><td><input type="text" name="Vmat45_110" size="12"><td><input type="text" name="Vmat45_115" size="12"><td>
+  <tr><td class="text-center"><b>1'</b><td><input type="text" name="Vmat60_90" size="12"><td><input type="text" name="Vmat60_95" size="12"><td><input type="text" name="Vmat60_100" size="12"><td><input type="text" name="Vmat60_105" size="12"><td><input type="text" name="Vmat60_110" size="12"><td><input type="text" name="Vmat60_115" size="12"><td>
+  <tr><td class="text-center"><b>1'15</b><td><input type="text" name="Vmat75_90" size="12"><td><input type="text" name="Vmat75_95" size="12"><td><input type="text" name="Vmat75_100" size="12"><td><input type="text" name="Vmat75_105" size="12"><td><input type="text" name="Vmat75_110" size="12"><td><input type="text" name="Vmat75_115" size="12"><td>
+  <tr><td class="text-center"><b>1'30</b><td><input type="text" name="Vmat90_90" size="12"><td><input type="text" name="Vmat90_95" size="12"><td><input type="text" name="Vmat90_100" size="12"><td><input type="text" name="Vmat90_105" size="12"><td><input type="text" name="Vmat90_110" size="12"><td><input type="text" name="Vmat90_115" size="12"><td>
+  <tr><td class="text-center"><b>2'</b><td><input type="text" name="Vmat120_90" size="12"><td><input type="text" name="Vmat120_95" size="12"><td><input type="text" name="Vmat120_100" size="12"><td><input type="text" name="Vmat120_105" size="12"><td><input type="text" name="Vmat120_110" size="12"><td><input type="text" name="Vmat120_115" size="12"><td>
+  <tr><td class="text-center"><b>2'30</b><td><input type="text" name="Vmat150_90" size="12"><td><input type="text" name="Vmat150_95" size="12"><td><input type="text" name="Vmat150_100" size="12"><td><input type="text" name="Vmat150_105" size="12"><td><input type="text" name="Vmat150_110" size="12"><td><input type="text" name="Vmat150_115" size="12"><td>
+  <tr><td class="text-center"><b>3'</b><td><input type="text" name="Vmat180_90" size="12"><td><input type="text" name="Vmat180_95" size="12"><td><input type="text" name="Vmat180_100" size="12"><td><input type="text" name="Vmat180_105" size="12"><td><input type="text" name="Vmat180_110" size="12"><td><input type="text" name="Vmat180_115" size="12"><td>
+  <tr><td class="text-center"><b>4'</b><td><input type="text" name="Vmat240_90" size="12"><td><input type="text" name="Vmat240_95" size="12"><td><input type="text" name="Vmat240_100" size="12"><td><input type="text" name="Vmat240_105" size="12"><td><input type="text" name="Vmat240_110" size="12"><td><input type="text" name="Vmat240_115" size="12"><td>
+  <tr><td class="text-center"><b>5'</b><td><input type="text" name="Vmat300_90" size="12"><td><input type="text" name="Vmat300_95" size="12"><td><input type="text" name="Vmat300_100" size="12"><td><input type="text" name="Vmat300_105" size="12"><td><input type="text" name="Vmat300_110" size="12"><td><input type="text" name="Vmat300_115" size="12"><td>
+  <tr><td class="text-center"><b>10'</b><td><input type="text" name="Vmat600_90" size="12"><td><input type="text" name="Vmat600_95" size="12"><td><input type="text" name="Vmat600_100" size="12"><td><input type="text" name="Vmat600_105" size="12"><td><input type="text" name="Vmat600_110" size="12"><td><input type="text" name="Vmat600_115" size="12"><td>
+  <tr><td class="text-center"><b>15'</b><td><input type="text" name="Vmat900_90" size="12"><td><input type="text" name="Vmat900_95" size="12"><td><input type="text" name="Vmat900_100" size="12"><td><input type="text" name="Vmat900_105" size="12"><td><input type="text" name="Vmat900_110" size="12"><td><input type="text" name="Vmat900_115" size="12"><td>
+  </table>
+
+
+  </center>
+  <br>
+  </form>
+
+</div>
+<footer>
+  <div class="bg_footer">
+    🦁🐔🏴‍☠️
+  </div>
+</footer>
+<!-- TAG : FOOTER STOP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+</body>
+</html>
