@@ -1,0 +1,53 @@
+---
+
+import { SITE } from "@config";
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import LinkButton from "@components/LinkButton.astro";
+import Hr from "@components/Hr.astro";
+import Card from "@components/Card";
+import Socials from "@components/Socials.astro";
+import getSortedPosts from "@utils/getSortedPosts";
+import slugify from "@utils/slugify";
+import { SOCIALS } from "@config";
+
+const posts = await getCollection("blog");
+
+const sortedPosts = getSortedPosts(posts);
+const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
+
+const socialCount = SOCIALS.filter(social => social.active).length;
+---
+
+<Layout title={`Home | ${SITE.title}`}>
+  <Header />
+
+  <main id="main-content">
+    <div class="not-found-wrapper">
+      <h1>Bienvenue</h1>
+      <p>Bonne visite</p>
+      <br>
+      <span aria-hidden="true">(^o^)</span>
+
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  #main-content {
+    @apply mx-auto flex max-w-3xl flex-1 items-center justify-center;
+  }
+  .not-found-wrapper {
+    @apply mb-14 flex flex-col items-center justify-center;
+  }
+  .not-found-wrapper h1 {
+    @apply text-9xl font-bold text-skin-accent;
+  }
+  .not-found-wrapper p {
+    @apply mt-4 text-2xl sm:text-3xl;
+  }
+</style>
