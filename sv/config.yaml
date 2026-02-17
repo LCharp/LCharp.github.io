@@ -1,0 +1,100 @@
+# Base configuration. Put secrets in config.local.yaml (ignored by git).
+source: "strava"  # "strava" or "garmin"
+
+strava:
+  client_id: "9817"
+  client_secret: "e93d86f21fd3319a575060c5b4e68feb11e43bfc"
+  refresh_token: "ef544d137fef76f770f848ba90456804e4f9f616"
+  profile_url: "https://www.strava.com/athletes/11945392" # optional dashboard header profile link
+  include_activity_urls: true # when true, tooltip details can show links to individual Strava activities
+
+garmin:
+  token_store_b64: ""
+  email: ""
+  password: ""
+  profile_url: "" # optional dashboard header profile link
+  include_activity_urls: false # when true, tooltip details can show links to individual Garmin activities
+  strict_token_only: false # when true, only token_store_b64 is used (no email/password fallback)
+
+sync:
+  # Optional history limits:
+  # start_date: "2019-01-01" # YYYY-MM-DD lower bound
+   lookback_years: 15        # ignored when start_date is set
+  recent_days: 7
+  resume_backfill: true
+  per_page: 200
+  prune_deleted: false
+
+rate_limits:
+  overall_15_min: 200
+  overall_daily: 2000
+  read_15_min: 100
+  read_daily: 1000
+  safety_buffer: 2
+  min_interval_seconds: 10
+
+activities:
+  types:
+    - AlpineSki
+    - BackcountrySki
+    - Badminton
+    - Canoeing
+    - Crossfit
+    - EBikeRide
+    - Elliptical
+    - EMountainBikeRide
+    - Golf
+    - GravelRide
+    - Handcycle
+    - HighIntensityIntervalTraining
+    - Hike
+    - IceSkate
+    - InlineSkate
+    - Kayaking
+    - Kitesurf
+    - MountainBikeRide
+    - NordicSki
+    - Pickleball
+    - Pilates
+    - Racquetball
+    - Ride
+    - RockClimbing
+    - RollerSki
+    - Rowing
+    - Run
+    - Sail
+    - Skateboard
+    - Snowboard
+    - Snowshoe
+    - Soccer
+    - Squash
+    - StairStepper
+    - StandUpPaddling
+    - Surfing
+    - Swim
+    - TableTennis
+    - Tennis
+    - TrailRun
+    - Velomobile
+    - VirtualRide
+    - VirtualRow
+    - VirtualRun
+    - Walk
+    - WeightTraining
+    - Wheelchair
+    - Windsurf
+    - Workout
+    - Yoga
+  include_all_types: true   # include all observed activity types by default
+  exclude_types: []         # optional explicit exclusions while still allowing new sport types
+  group_other_types: false  # when false, keep raw source activity names as-is
+  other_bucket: OtherSports # fallback bucket for unknown activity categories
+  group_aliases: {}         # optional explicit group overrides, e.g. {SkiErg: WinterSports}
+  type_aliases: {}          # optional explicit remaps; keep empty for exact source naming
+
+units:
+  distance: "km"   # "mi" or "km"
+  elevation: "m"  # "ft" or "m"
+
+heatmaps:
+  week_start: "monday" # "sunday" or "monday"
