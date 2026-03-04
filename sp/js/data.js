@@ -1,17 +1,17 @@
 const bookmarks = {
     Main: {
         gmail: {
-            url: "https://ksuite.infomaniak.com/1668404",
+            url: "https://ksuite.infomaniak.com/",
             logo: "fa-brands fa-kaggle",
             displayUrl: "kSuite",
         },
-		       drive: {
+		drive: {
             url: "ksuite.infomaniak.com/1668404/kdrive/app/drive",
             logo: "fa-regular fa-hard-drive",
             displayUrl: "kDrive",
         },
         whatsapp: {
-            url: "https://app.tuta.com/mail/O_vzoau-1V-9",
+            url: "https://app.tuta.com/mail/",
             logo: "fa-solid fa-box",
             displayUrl: "Tuta Mail",
         },
@@ -24,28 +24,86 @@ const bookmarks = {
             logo: "fa-brands fa-doc",
             displayUrl: "EdocPerso",
         }, 
+		mysiale: {
+            url: "https://edocperso.fr/login",
+            logo: "fa-brands fa-doc",
+            displayUrl: "Mysilae",
+        }, 
+		notebook: {
+			url: "https://notebooklm.google.com",
+			logo: "fa-brands fa-doc",
+			displayUrl: "NotebookLM",
+		}, 
+		perplexity: {
+			url: "https://www.perplexity.ai",
+			logo: "fa-brands fa-doc",
+			displayUrl: "Perplexity",
+		}, 
     },
-		
-    Fun: {
-        anichart: {
+	    
+	   Fun: {
+		   
+        bluesky: {
+            url: "https://bsky.app",
+            logo: "fa-solid fa-bluesky",
+            displayUrl: "BlueSky",
+        },		   
+        reddit: {
             url: "https://www.reddit.com",
             logo: "fa-brands fa-reddit",
             displayUrl: "Reddit",
         },
-        hianime: {
+        senscritique: {
             url: "https://www.senscritique.com/live",
             logo: "fa-solid fa-play",
             displayUrl: "SensCritique",
         },
-		       youtube: {
+		youtube: {
             url: "https://www.youtube.com/",
             logo: "fa-brands fa-youtube",
             displayUrl: "Youtube",
         },
-		       dealabs: {
+
+    },
+	
+	Sport: {
+        strava: {
+            url: "https://strava.com/",
+            logo: "fa-brands fa-strava",
+            displayUrl: "Strava",
+        },
+		polar: {
+            url: "https://strava.com/",
+            logo: "fa-brands fa-doc",
+            displayUrl: "Polar Flow",
+        },
+		Nolio: {
+            url: "https://nolio.com/",
+            logo: "fa-brands fa-doc",
+            displayUrl: "Nolio",
+        },
+		interval: {
+            url: "https://interval.icu/",
+            logo: "fa-brands fa-doc",
+            displayUrl: "Interval.icu",
+        },
+    },
+		
+ Social: {
+		 dealabs: {
             url: "https://www.youtube.com/",
             logo: "fa-solid fa-flask",
             displayUrl: "Dealabs",
+        },
+		instagram: {
+			url: "https://www.instagram.com",
+            logo: "fa-brands fa-instagram",
+            displayUrl: "Instagram",
+        },
+        facebook: {
+            url: "https://www.facebook.com/",
+            logo: "fa-brands fa-facebook",
+            displayUrl: "Facebook",
         },
     },
 	
@@ -72,44 +130,7 @@ const bookmarks = {
         },
 
     },	
-    Sport: {
-        strava: {
-            url: "https://strava.com/",
-            logo: "fa-brands fa-strava",
-            displayUrl: "Strava",
-        },
-		polar: {
-            url: "https://strava.com/",
-            logo: "fa-brands fa-strava",
-            displayUrl: "Polar Flow",
-        },
-		Nolio: {
-            url: "https://nolio.com/",
-            logo: "fa-brands fa-strava",
-            displayUrl: "Nolio",
-        },
-		interval: {
-            url: "https://interval.icu/",
-            logo: "fa-brands fa-strava",
-            displayUrl: "Interval.icu",
-        },
-    },
-    Social: {
-        bluesky: {
-            url: "https://bsky.app",
-            logo: "fa-solid fa-bluesky",
-            displayUrl: "BlueSky",
-        },
-		instagram: {
-			url: "https://www.instagram.com",
-            logo: "fa-brands fa-instagram",
-            displayUrl: "Instagram",
-        },
-        facebook: {
-            url: "https://www.facebook.com/",
-            logo: "fa-brands fa-facebook",
-            displayUrl: "Facebook",
-        },
-    },
+
+
 
 };
