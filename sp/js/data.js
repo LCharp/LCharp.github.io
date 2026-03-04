@@ -21,22 +21,22 @@ const bookmarks = {
     Work: {
         edoc: {
             url: "https://edocperso.fr/login",
-            logo: "fa-brands fa-doc",
+            logo: "",
             displayUrl: "EdocPerso",
         }, 
 		mysiale: {
             url: "https://edocperso.fr/login",
-            logo: "fa-brands fa-doc",
+            logo: "",
             displayUrl: "Mysilae",
         }, 
 		notebook: {
 			url: "https://notebooklm.google.com",
-			logo: "fa-brands fa-doc",
+			logo: "",
 			displayUrl: "NotebookLM",
 		}, 
 		perplexity: {
 			url: "https://www.perplexity.ai",
-			logo: "fa-brands fa-doc",
+			logo: "",
 			displayUrl: "Perplexity",
 		}, 
     },
@@ -45,7 +45,7 @@ const bookmarks = {
 		   
         bluesky: {
             url: "https://bsky.app",
-            logo: "fa-solid fa-bluesky",
+            logo: "fa-brands fa-bluesky",
             displayUrl: "BlueSky",
         },		   
         reddit: {
@@ -74,17 +74,17 @@ const bookmarks = {
         },
 		polar: {
             url: "https://strava.com/",
-            logo: "fa-brands fa-doc",
+            logo: "",
             displayUrl: "Polar Flow",
         },
 		Nolio: {
             url: "https://nolio.com/",
-            logo: "fa-brands fa-doc",
+            logo: "",
             displayUrl: "Nolio",
         },
 		interval: {
             url: "https://interval.icu/",
-            logo: "fa-brands fa-doc",
+            logo: "",
             displayUrl: "Interval.icu",
         },
     },
@@ -104,6 +104,11 @@ const bookmarks = {
             url: "https://www.facebook.com/",
             logo: "fa-brands fa-facebook",
             displayUrl: "Facebook",
+        },
+		        twitch: {
+            url: "https://www.twitch.tv/",
+            logo: "fa-brands fa-twitch",
+            displayUrl: "Twitch",
         },
     },
 	
