@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startpage</title>
+
+    <!-- Bold Typography choices following frontend-design: Syne & Fragment Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Syne:wght@400..800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Logos from data.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Oat UI (Baseline) -->
+    <link rel="stylesheet" href="https://unpkg.com/@knadh/oat/oat.min.css">
+    <script src="https://unpkg.com/@knadh/oat/oat.min.js" defer></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="editorial-layout">
+        <!-- Sidebar Typography Block -->
+        <aside class="title-section stagger-in" style="animation-delay: 0s;">
+            <h1 id="greeting">HELLO</h1>
+            <div id="clock" class="time-display">00:00:00</div>
+
+            <form action="https://startpage.com/" method="get" class="search-form">
+                <input type="search" name="q" placeholder="startpage" required autofocus aria-label="Search">
+                <button type="submit">GO</button>
+            </form>
+
+        </aside>
+
+        <!-- Right Grid For Cards -->
+        <main>
+            <div class="row" id="categories-grid">
+                <!-- Javascript will dynamically inject articles heavily styled into this container -->
+            </div>
+        </main>
+    </div>
+
+    <script src="js/data.js" defer></script>
+    <script src="js/components/Clock.js" defer></script>
+    <script src="js/components/BookmarkGrid.js" defer></script>
+    <script src="js/components/Anilist.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,419 @@
+:root {
+    --color-primary: #ff3e00;
+    --font-display: 'Syne', sans-serif;
+    --font-mono: 'Fragment Mono', monospace;
+    --bg-color: #d6d1c4;
+    --text-color: #111111;
+}
+
+:root[data-theme="dark"] {
+    --bg-color: #111111;
+    --text-color: #d6d1c4;
+}
+
+:root[data-theme="light"] {
+    --bg-color: #d6d1c4;
+    --text-color: #111111;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --bg-color: #111111;
+        --text-color: #d6d1c4;
+    }
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    overflow-x: hidden;
+}
+
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-size: 32px 32px;
+    z-index: 0;
+}
+
+body::before {
+    background-image: radial-gradient(var(--text-color) 1.5px, transparent 1.5px);
+    opacity: 0.2;
+    -webkit-mask-image: radial-gradient(circle at center, black 20%, transparent 80%);
+    mask-image: radial-gradient(circle at center, black 20%, transparent 80%);
+}
+
+body::after {
+    background-image: radial-gradient(var(--color-primary) 2.5px, transparent 2.5px);
+    opacity: 0.8;
+    -webkit-mask-image: radial-gradient(circle 120px at var(--mouse-x, 50%) var(--mouse-y, 50%), black 0%, transparent 100%);
+    mask-image: radial-gradient(circle 120px at var(--mouse-x, 50%) var(--mouse-y, 50%), black 0%, transparent 100%);
+}
+
+.editorial-layout {
+    width: 95vw;
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    padding: 3rem 2rem;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 900px) {
+    .editorial-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+.title-section {
+    position: sticky;
+    top: 3rem;
+}
+
+h1 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(3rem, 8vw, 4.5rem);
+    line-height: 0.85;
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+    margin: 0 0 1.5rem 0;
+    color: var(--text-color);
+}
+
+h1::after {
+    content: '.';
+    color: var(--color-primary);
+}
+
+.time-display {
+    font-family: var(--font-mono);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--text-color);
+    background: var(--color-primary);
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    font-weight: bold;
+    transform: rotate(-2deg);
+    border: 2px solid var(--text-color);
+    box-shadow: 4px 4px 0 var(--text-color);
+    transition: transform 0.2s;
+}
+
+.time-display:hover {
+    transform: rotate(1deg) scale(1.05);
+}
+
+/* Search Form */
+.search-form {
+    display: flex;
+    margin-top: 2rem;
+    border: 2px solid var(--text-color);
+    background: var(--bg-color);
+    box-shadow: 4px 4px 0 var(--text-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+    padding: 0;
+}
+
+.search-form:focus-within {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--color-primary);
+}
+
+.search-form input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 1.25rem 1rem;
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    color: var(--text-color);
+    outline: none;
+}
+
+.search-form input::placeholder {
+    color: color-mix(in srgb, var(--text-color) 60%, transparent);
+}
+
+.search-form button {
+    background: var(--text-color);
+    color: var(--bg-color);
+    border: none;
+    border-left: 2px solid var(--text-color);
+    border-radius: 0;
+    padding: 0 1.5rem;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.search-form button:hover,
+.search-form button:focus {
+    background: var(--color-primary);
+    color: var(--text-color);
+}
+
+/* CARDS Overrides over Oat UI defaults */
+.editorial-layout .card {
+    background: var(--bg-color);
+    border: 2px solid var(--text-color);
+    border-radius: 0;
+    box-shadow: 6px 6px 0 var(--text-color);
+    padding: 2rem;
+    height: 100%;
+    transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.editorial-layout .card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 10px 10px 0 var(--color-primary);
+}
+
+.editorial-layout .card header h3 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 2rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+    margin-top: 0;
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+/* CHIPS */
+.chip-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: auto;
+}
+
+.link-chip {
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--bg-color);
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    transition: all 0.2s;
+    font-weight: bold;
+}
+
+.link-chip:hover {
+    background: var(--text-color);
+    color: var(--bg-color);
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0 var(--color-primary);
+}
+
+.link-chip i {
+    font-size: 1rem;
+}
+
+/* Animation utilities */
+.stagger-in {
+    opacity: 0;
+    animation: slideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) skewY(2deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) skewY(0);
+    }
+}
+
+/* Oat Utility fixes */
+.col-6 {
+    padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+    .col-6 {
+        width: 100% !important;
+        margin-left: 0;
+    }
+}
+
+/* Anilist Section */
+.section-heading {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin: 0 0 1rem 0;
+    color: var(--text-color);
+    letter-spacing: -0.02em;
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.anime-deck-container {
+    width: 100%;
+    position: relative;
+    /* Height accommodates the card height + stacking offset */
+    height: 180px;
+    margin-bottom: 2rem;
+    perspective: 1000px;
+}
+
+.anime-track {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.anime-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--bg-color);
+    border: 2px solid var(--text-color);
+    box-shadow: 4px 4px 0 var(--text-color);
+    padding: 1.25rem;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    cursor: pointer;
+    transform-origin: center center;
+    /* Default hidden state for cards beyond the visible stack */
+    opacity: 0;
+    pointer-events: none;
+    transform: translate3d(0, 0, -100px) translateY(20px);
+}
+
+/* 
+  We will use data-index attributes set by JS to style the top 4 cards in the stack.
+  0 is the front card, 1 is behind it, etc.
+*/
+
+.anime-card[data-index="0"] {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 10;
+    transform: translate3d(0, 0, 0) translateY(0);
+    box-shadow: 6px 6px 0 var(--color-primary);
+}
+
+.anime-card[data-index="1"] {
+    opacity: 1;
+    z-index: 9;
+    /* Moved down and scaled slightly */
+    transform: translate3d(8px, 8px, -20px) scale(0.98);
+    box-shadow: 4px 4px 0 var(--text-color);
+}
+
+.anime-card[data-index="2"] {
+    opacity: 0.8;
+    z-index: 8;
+    transform: translate3d(16px, 16px, -40px) scale(0.96);
+    box-shadow: 2px 2px 0 color-mix(in srgb, var(--text-color) 50%, transparent);
+}
+
+.anime-card[data-index="3"] {
+    opacity: 0.4;
+    z-index: 7;
+    transform: translate3d(24px, 24px, -60px) scale(0.94);
+    box-shadow: 1px 1px 0 color-mix(in srgb, var(--text-color) 20%, transparent);
+}
+
+/* The card currently animating away */
+.anime-card.animating-out {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate3d(-50px, -20px, 50px) rotate(-5deg);
+}
+
+.anime-card:hover[data-index="0"] {
+    transform: translate3d(-4px, -4px, 10px);
+    box-shadow: 10px 10px 0 var(--color-primary);
+}
+
+.anime-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.anime-ep {
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: 0.15rem 0.4rem;
+}
+
+.anime-time {
+    color: var(--color-primary);
+}
+
+.anime-title {
+    font-family: var(--font-mono);
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 1.1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.anime-count {
+    position: absolute;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+.anime-error {
+    font-family: var(--font-mono);
+    color: var(--color-primary);
+    font-weight: bold;
+    padding: 1rem;
+    border: 2px dashed var(--color-primary);
+}
