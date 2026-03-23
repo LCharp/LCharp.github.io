@@ -6,7 +6,7 @@ const bookmarks = {
             displayUrl: "kSuite",
         },
 		drive: {
-            url: "ksuite.infomaniak.com/1668404/kdrive/app/drive",
+            url: "https://ksuite.infomaniak.com/1668404/kdrive/app/drive",
             logo: "fa-regular fa-hard-drive",
             displayUrl: "kDrive",
         },
@@ -25,7 +25,7 @@ const bookmarks = {
             displayUrl: "EdocPerso",
         }, 
 		mysiale: {
-            url: "https://edocperso.fr/login",
+            url: "https://my.silae.fr",
             logo: "",
             displayUrl: "Mysilae",
         }, 
@@ -73,14 +73,14 @@ const bookmarks = {
             displayUrl: "Strava",
         },
 		polar: {
-            url: "https://strava.com/",
+            url: "https://flow.polar.com/diary",
             logo: "",
             displayUrl: "Polar Flow",
         },
 		Nolio: {
-            url: "https://nolio.com/",
+            url: "https://subthreshold.net/calendar",
             logo: "",
-            displayUrl: "Nolio",
+            displayUrl: "SubThreshold",
         },
 		interval: {
             url: "https://interval.icu/",
@@ -119,12 +119,12 @@ const bookmarks = {
             displayUrl: "Netflix",
         },
         prime: {
-            url: "https://www.senscritique.com/live",
+            url: "https://www.primevideo.com/region/eu/?ref_=dvm_crs_prm_fr_s_d_pmpg_eg_p",
             logo: "",
             displayUrl: "Prime Video",
         },
 		disney: {
-            url: "https://www.youtube.com/",
+            url: "https://www.disneyplus.com/fr-fr/home",
             logo: "",
             displayUrl: "Disney+",
         },
