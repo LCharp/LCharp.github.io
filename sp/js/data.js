@@ -135,7 +135,7 @@ const bookmarks = {
         },
 
     },	
-Saved: {
+FOMO: {
         reddit: {
             url: "https://www.reddit.com/user/Kluzik/saved/",
             logo: "",
@@ -147,7 +147,12 @@ Saved: {
             displayUrl: "Bsky",
         },
 		x: {
-            url: "https://x.com/i/bookmarks",
+            url: "https://x.com/i/bookmarkshttps://www.youtube.com/playlist?list=WL",
+            logo: "",
+            displayUrl: "X",
+        },
+		youtube: {
+            url: "https://www.youtube.com/playlist?list=WL",
             logo: "",
             displayUrl: "X",
         },
