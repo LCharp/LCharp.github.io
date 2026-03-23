@@ -135,7 +135,24 @@ const bookmarks = {
         },
 
     },	
+Saved: {
+        reddit: {
+            url: "https://www.reddit.com/user/Kluzik/saved/",
+            logo: "",
+            displayUrl: "Reddit",
+        },
+        bsky: {
+            url: "https://bsky.app/saved",
+            logo: "",
+            displayUrl: "Bsky",
+        },
+		x: {
+            url: "https://x.com/i/bookmarks",
+            logo: "",
+            displayUrl: "X",
+        },
 
+    },	
 
 
 };
