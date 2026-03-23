@@ -141,20 +141,20 @@ FOMO: {
             logo: "",
             displayUrl: "Reddit",
         },
-        bsky: {
+        BlueSky: {
             url: "https://bsky.app/saved",
             logo: "",
-            displayUrl: "Bsky",
+            displayUrl: "BlueSky",
         },
 		x: {
             url: "https://x.com/i/bookmarkshttps://www.youtube.com/playlist?list=WL",
             logo: "",
             displayUrl: "X",
         },
-		youtube: {
+		Youtube: {
             url: "https://www.youtube.com/playlist?list=WL",
             logo: "",
-            displayUrl: "X",
+            displayUrl: "Youtube",
         },
 
     },	
