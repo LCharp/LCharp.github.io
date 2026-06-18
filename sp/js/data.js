@@ -35,18 +35,18 @@ const bookmarks = {
 			displayUrl: "NotebookLM",
 		}, 
 		perplexity: {
-			url: "https://www.perplexity.ai",
+			url: "https://claude.ai/new",
 			logo: "",
-			displayUrl: "Perplexity",
+			displayUrl: "Claude",
 		}, 
     },
 	    
 	   Fun: {
 		   
         bluesky: {
-            url: "https://bsky.app",
+            url: "https://mu.social",
             logo: "fa-brands fa-bluesky",
-            displayUrl: "BlueSky",
+            displayUrl: "Mu",
         },		   
         reddit: {
             url: "https://www.reddit.com",
@@ -83,9 +83,9 @@ const bookmarks = {
             displayUrl: "SubThreshold",
         },
 		interval: {
-            url: "https://interval.icu/",
+            url: "https://intervals.icu",
             logo: "",
-            displayUrl: "Interval.icu",
+            displayUrl: "Intervals.icu",
         },
     },
 		
@@ -142,9 +142,9 @@ FOMO: {
             displayUrl: "Reddit",
         },
         BlueSky: {
-            url: "https://bsky.app/saved",
+            url: "https://mu.social/saved",
             logo: "",
-            displayUrl: "BlueSky",
+            displayUrl: "Mu",
         },
 		x: {
             url: "https://x.com/i/bookmarkshttps://www.youtube.com/playlist?list=WL",
